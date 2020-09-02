@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XpandoLibrary;
 
 namespace RegraD3
 {
@@ -11,9 +12,12 @@ namespace RegraD3
         static void Main(string[] args)
         {
             bool novamente = true;
+            Pipelines ExecPipeline = new Pipelines();
             while (novamente)
             {
-                calcula();
+                dynamic x = ExecPipeline["CalculoRegraD3"].RunDetailed(new { }.ToExpando());
+                Console.WriteLine(x.Output.resultado);
+
                 Console.WriteLine("Novamente? 0 => Não || 1 => Sim");
                 if (Console.ReadLine() == "0")
                 {
@@ -24,12 +28,6 @@ namespace RegraD3
 
         static void calcula()
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-
-            int x = (c * b) / a;
-            Console.WriteLine(x);
         }
     }
 }

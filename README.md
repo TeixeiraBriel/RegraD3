@@ -1,2 +1,2 @@
 # RegraD3
-Sistema ConsoleApp basico pra Regra de Três
+Sistema ConsoleApp basico pra Regra de Três;
