@@ -25,9 +25,5 @@ namespace RegraD3
                 }
             }
         }
-
-        static void calcula()
-        {
-        }
     }
 }
